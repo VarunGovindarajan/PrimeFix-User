@@ -3,6 +3,13 @@ import { useLocation } from 'react-router-dom';
 import SalonService from '../components/services/SalonService';
 import ACService from '../components/services/ACService';
 import PlumbingService from '../components/services/PlumbingService';
+import CleaningService from '../components/services/CleaningService';
+import ElectricalService from '../components/services/ElectricalService';
+import CarpenterService from '../components/services/CarpenterService';
+import SecurityService from '../components/services/SecurityService';
+import ElectronicsService from '../components/services/ElectronicsService';
+import TransportationService from '../components/services/TransportationService';
+
 
 const ServiceRequest = () => {
   const location = useLocation();
@@ -16,9 +23,20 @@ const ServiceRequest = () => {
         return <ACService />;
       case "Plumbing":
         return <PlumbingService />;
-      // ... handle other categories
+      case "Bathroom & Kitchen Cleaning":
+        return <CleaningService />;
+      case "Electrical":
+        return <ElectricalService />;
+      case "Carpenter":
+        return <CarpenterService />;
+      case "Home Security & Automation":
+        return <SecurityService />;
+      case "Mobile and Electronics":
+        return <ElectronicsService />;
+      case "Transportation & Moving Services":
+        return <TransportationService />;
       default:
-        return <p className="text-center text-gray-500">Service not found</p>;
+        return <p className="text-center text-red-500 font-semibold">Service not found</p>;
     }
   };
 

@@ -18,7 +18,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const services = [
-    { image: BarberImage, title: "Salon for Men and Womennnn" },
+    { image: BarberImage, title: "Salon for Men and Women" },
     { image:  AR, title: "AC & Appliance Repair" },
     { image: hk, title: "Bathroom & Kitchen Cleaning" },
     { image: elec, title: "Electrical" },
